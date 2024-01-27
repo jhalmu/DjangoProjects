@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>{% block head_title %}The Portal - home {% endblock %}</title>
+    {% include 'head/fonts.html' %} {% include 'head/css.html' %}
+  </head>
+
+  <body class="prose dark:prose-invert">
+    {% include 'partials/nav.html' %} {% block content %}{% endblock %}
+  </body>
+</html>

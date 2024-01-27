@@ -1,0 +1,4 @@
+# requirements.in
+django
+django-jinja
+django-template-partials

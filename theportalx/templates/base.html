@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html data-theme="dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed/rss">
+  <script src="{% static 'js/htmx.min.js' %}" defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,600;1,400;0,100&display=swap" rel="stylesheet">
+
+  <style>
+    html
+    {
+      font-size: 80% !important;
+      height: 100%;
+    }
+    li>a:link {
+      font-size:0.6em;
+      text-transform: uppercase;
+    }
+    li>a:hover {
+      text-shadow: 0 0 10px #fff;
+    }
+    strong {
+      font-size:140%;
+    }
+    h1 {
+      text-shadow: 0 0 20px #777;
+      letter-spacing: -2px;
+    }
+    h2 {
+      font-family: 'Raleway', sans-serif;
+      font-weight:400;
+      font-style:italic;
+    }
+    header {
+      background-color:inherit;
+    }
+    footer {
+      text-align: center;
+      padding-top: 1rem; 
+    }
+    li>strong {
+      color:#5b5bc7;
+      text-shadow: 0 0 20px #3d3ded;
+      letter-spacing: -2px;
+    }
+    article {
+      border-radius: 1rem;
+    }
+  </style>
+
+  {% if title %}
+  <title>The Portal - {{ title }}</title>
+  {% else %}
+  <title>The Portal</title>
+  {% endif %}
+</head>
+
+<body>  
+  <main class="container"> 
+    <header>
+    {% include 'main_nav.html' %}
+    </header>
+    {% block content %}{% endblock %}
+    <footer>
+    {% include 'footer.html' %}
+    </footer>
+</main>
+
+</body>
+</html>
