@@ -1,9 +1,6 @@
 from django.db import models
-from django.db.models.functions import Upper
 from django.utils.translation import gettext_lazy as _
 
-class Currency(models.Model):
-    
 
 CURRRENCY_CHOICES = (
     ("USD", "USD"),
