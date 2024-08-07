@@ -1,5 +1,5 @@
 asgiref==3.7.2
-django==4.2.14
+django==4.2.15
 django-jinja==2.11.0
 django-template-partials==23.4
 jinja2==3.1.4
